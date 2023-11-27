@@ -34,7 +34,7 @@ export class ItemsService {
     });
   }
 
-  async findOne(id: number): Promise<Items> {
+  async findOne(id: number | string): Promise<Items> {
     return this.items.findOne({
       where: { id },
     });
