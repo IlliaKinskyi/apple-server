@@ -49,10 +49,10 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       main_camera: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
       },
       front_camera: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
       },
       battery: {
         type: Sequelize.INTEGER,

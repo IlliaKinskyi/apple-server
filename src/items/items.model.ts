@@ -42,10 +42,10 @@ export class Items extends Model {
   cores: number;
 
   @Column
-  main_camera: string;
+  main_camera: number;
 
   @Column
-  front_camera: string;
+  front_camera: number;
 
   @Column
   battery: number;
