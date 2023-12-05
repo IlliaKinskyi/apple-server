@@ -10,7 +10,7 @@ import { AuthService } from 'src/auth/auth.service';
 import { ItemsModule } from 'src/items/items.module';
 import { ItemsService } from 'src/items/items.service';
 
-describe('Auth Service', () => {
+describe('Items Service', () => {
   let app: INestApplication;
   let itemsService: ItemsService;
 
