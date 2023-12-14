@@ -16,6 +16,11 @@ async function bootstrap() {
   app.use(passport.initialize());
   app.use(passport.session());
 
+  app.enableCors({
+    credentials: true,
+    origin: ['http://localhost:3001'],
+  });
+
   const config = new DocumentBuilder()
     .setTitle('Apple')
     .setDescription('api documentation')
