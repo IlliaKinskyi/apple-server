@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { Items } from './items.model';
-import { IBrandQuery } from './types';
+import { IBrandFilter, IBrandQuery } from './types';
 import { Op } from 'sequelize';
 
 @Injectable()
@@ -16,9 +16,22 @@ export class ItemsService {
   ): Promise<{ count: number; rows: Items[] }> {
     const limit = +query.limit;
     const offset = +query.offset * 20;
+    const filter = {} as Partial<IBrandFilter>;
+
+    if (query.priceFrom && query.priceTo) {
+      filter.price = {
+        [Op.between]: [+query.priceFrom, +query.priceTo],
+      };
+    }
+
+    if (query.brand) {
+      filter.brand = JSON.parse(decodeURIComponent(query.brand));
+    }
+
     return this.items.findAndCountAll({
       limit,
       offset,
+      where: filter,
     });
   }
 
