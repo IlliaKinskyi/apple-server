@@ -23,7 +23,7 @@ export class ShoppingCart extends Model {
   @Column({ defaultValue: 0 })
   quantity: number;
 
-  @Column({ defaultValue: 0 })
+  @Column({ defaultValue: 1 })
   count: number;
 
   @Column({ defaultValue: 0 })
