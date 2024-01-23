@@ -1,25 +1,25 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "test",
-    "host": "localhost",
+    "username": "freedb_illia",
+    "password": "J73QBDyJUSP?V*P",
+    "database": "freedb_apple_store",
+    "host": "sql.freedb.tech",
     "dialect": "mysql",
     "port": 3306
   },
   "test": {
-    "username": "root",
-    "password": "root",
-    "database": "test",
-    "host": "localhost",
+    "username": "freedb_illia",
+    "password": "J73QBDyJUSP?V*P",
+    "database": "freedb_apple_store",
+    "host": "sql.freedb.tech",
     "dialect": "mysql",
     "port": 3306
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "test",
-    "host": "localhost",
+    "username": "freedb_illia",
+    "password": "J73QBDyJUSP?V*P",
+    "database": "freedb_apple_store",
+    "host": "sql.freedb.tech",
     "dialect": "mysql",
     "port": 3306
   }
