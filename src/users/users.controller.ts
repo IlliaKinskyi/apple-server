@@ -39,7 +39,6 @@ export class UsersController {
   @Post('/login')
   @UseGuards(LocalAuthGuard)
   @HttpCode(HttpStatus.OK)
-  @Header('Content-type', 'application/json')
   login(@Request() req) {
     return { user: req.user, msg: 'Logged in' };
   }
